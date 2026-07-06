@@ -86,13 +86,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "كتالوج مجمدات بورصة المستقبل: لحوم، دجاج، أسماك، زبدة وأجبان طازجة مجمدة بأفضل جودة وأسعار تنافسية.",
       },
       { name: "author", content: "مجمدات بورصة المستقبل" },
-      { property: "og:title", content: "مجمدات بورصة المستقبل" },
+      { property: "og:title", content: "مجمدات بورصة المستقبل — جودة تثق فيها وطعم لا يقاوم" },
       {
         property: "og:description",
         content: "تصفح كتالوج المنتجات الطازجة المجمدة بأفضل جودة وأسعار تنافسية.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "مجمدات بورصة المستقبل — جودة تثق فيها وطعم لا يقاوم" },
+      { name: "description", content: "كتالوج مجمدات بورصة المستقبل: لحوم، دجاج، أسماك، زبدة وأجبان طازجة مجمدة بأفضل جودة وأسعار تنافسية." },
+      { property: "og:description", content: "كتالوج مجمدات بورصة المستقبل: لحوم، دجاج، أسماك، زبدة وأجبان طازجة مجمدة بأفضل جودة وأسعار تنافسية." },
+      { name: "twitter:description", content: "كتالوج مجمدات بورصة المستقبل: لحوم، دجاج، أسماك، زبدة وأجبان طازجة مجمدة بأفضل جودة وأسعار تنافسية." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6fb05e24-69b2-49f5-9aa5-f4cf5534d4cd/id-preview-57042111--7abeba38-1dbd-470b-a7ff-1ca54d47b306.lovable.app-1783361758078.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6fb05e24-69b2-49f5-9aa5-f4cf5534d4cd/id-preview-57042111--7abeba38-1dbd-470b-a7ff-1ca54d47b306.lovable.app-1783361758078.png" },
     ],
     links: [
       {
