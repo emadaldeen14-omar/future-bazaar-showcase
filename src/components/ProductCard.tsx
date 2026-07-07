@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { StarRating } from "./StarRating";
-import { categoryImage, type Product } from "@/data/catalog";
+import { productImage, type Product } from "@/data/catalog";
 
 export function ProductCard({ product }: { product: Product }) {
   return (
