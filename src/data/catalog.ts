@@ -156,12 +156,13 @@ function slugify(name: string, i: number) {
   return `p-${i}-${name.replace(/[^\u0600-\u06FF0-9]+/g, "-").slice(0, 24)}`;
 }
 
-export const products: Product[] = raw.map(([categoryId, name, price, weight], i) => ({
+export const products: Product[] = raw.map(([categoryId, name, price, weight, image], i) => ({
   id: slugify(name, i),
   name,
   price,
   weight,
   categoryId,
+  image,
   rating: 4 + ((i * 7) % 10) / 10,
   reviews: 8 + ((i * 13) % 90),
   description:
