@@ -86,7 +86,7 @@ function ProductPage() {
       <div className="grid gap-8 lg:grid-cols-2">
         <div className="relative overflow-hidden rounded-3xl border border-border shadow-card">
           <img
-            src={categoryImage(product.categoryId)}
+            src={productImage(product)}
             alt={product.name}
             width={800}
             height={800}
