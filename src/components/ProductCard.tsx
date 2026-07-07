@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { StarRating } from "./StarRating";
-import { categoryImage, type Product } from "@/data/catalog";
+import { productImage, type Product } from "@/data/catalog";
 
 export function ProductCard({ product }: { product: Product }) {
   return (
@@ -11,7 +11,7 @@ export function ProductCard({ product }: { product: Product }) {
     >
       <div className="relative aspect-square overflow-hidden bg-muted">
         <img
-          src={categoryImage(product.categoryId)}
+          src={productImage(product)}
           alt={product.name}
           loading="lazy"
           width={800}

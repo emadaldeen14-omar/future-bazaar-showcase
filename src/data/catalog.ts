@@ -5,12 +5,24 @@ import seafood from "@/assets/cat-seafood.jpg";
 import dairy from "@/assets/cat-dairy.jpg";
 import misc from "@/assets/cat-misc.jpg";
 
+// ============================================================
+// PER-PRODUCT IMAGES
+// To give a product its own picture:
+//   1. Drop the image file in: src/assets/products/
+//   2. Import it here, e.g.:
+//        import stripsDolphin from "@/assets/products/strips-dolphin.jpg";
+//   3. Add a 5th value to that product's row in the `raw` list below:
+//        ["fastfood", "ستريبس دولفين", 200, "عبوة", stripsDolphin],
+// Products without a 5th value fall back to their category image.
+// ============================================================
+
 export type Product = {
   id: string;
   name: string;
   price: number;
   weight?: string;
   categoryId: string;
+  image?: string;
   rating: number;
   reviews: number;
   description: string;
@@ -83,7 +95,7 @@ export function reviewsFor(id: string) {
   return [reviewsList[seed % 5], reviewsList[(seed + 2) % 5], reviewsList[(seed + 4) % 5]];
 }
 
-const raw: Array<[string, string, number, string?]> = [
+const raw: Array<[string, string, number, string?, string?]> = [
   // fastfood
   ["fastfood", "ستريبس دولفين", 200, "عبوة"],
   ["fastfood", "ستريبس ولعتين", 280, "عبوة"],
@@ -144,12 +156,13 @@ function slugify(name: string, i: number) {
   return `p-${i}-${name.replace(/[^\u0600-\u06FF0-9]+/g, "-").slice(0, 24)}`;
 }
 
-export const products: Product[] = raw.map(([categoryId, name, price, weight], i) => ({
+export const products: Product[] = raw.map(([categoryId, name, price, weight, image], i) => ({
   id: slugify(name, i),
   name,
   price,
   weight,
   categoryId,
+  image,
   rating: 4 + ((i * 7) % 10) / 10,
   reviews: 8 + ((i * 13) % 90),
   description:
@@ -161,6 +174,11 @@ export const featuredProducts = products.filter((p) => p.featured).slice(0, 8);
 
 export function categoryImage(categoryId: string) {
   return categories.find((c) => c.id === categoryId)?.image ?? fastfood;
+}
+
+// Returns the product's own image if it has one, otherwise its category image.
+export function productImage(product: Product) {
+  return product.image ?? categoryImage(product.categoryId);
 }
 
 export function getProduct(id: string) {

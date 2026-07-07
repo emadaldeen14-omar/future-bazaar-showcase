@@ -5,9 +5,9 @@ import { StarRating } from "@/components/StarRating";
 import { ProductCard } from "@/components/ProductCard";
 import {
   brand,
-  categoryImage,
   getCategory,
   getProduct,
+  productImage,
   products,
   reviewsFor,
 } from "@/data/catalog";
@@ -29,8 +29,8 @@ export const Route = createFileRoute("/product/$productId")({
         { name: "description", content: `${product.name} بسعر ${product.price} جنيه. ${product.description}` },
         { property: "og:title", content: product.name },
         { property: "og:description", content: `${product.name} بسعر ${product.price} جنيه.` },
-        { property: "og:image", content: categoryImage(product.categoryId) },
-        { name: "twitter:image", content: categoryImage(product.categoryId) },
+        { property: "og:image", content: productImage(product) },
+        { name: "twitter:image", content: productImage(product) },
       ],
     };
   },
@@ -86,7 +86,7 @@ function ProductPage() {
       <div className="grid gap-8 lg:grid-cols-2">
         <div className="relative overflow-hidden rounded-3xl border border-border shadow-card">
           <img
-            src={categoryImage(product.categoryId)}
+            src={productImage(product)}
             alt={product.name}
             width={800}
             height={800}
