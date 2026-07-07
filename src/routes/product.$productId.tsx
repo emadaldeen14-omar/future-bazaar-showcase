@@ -29,8 +29,8 @@ export const Route = createFileRoute("/product/$productId")({
         { name: "description", content: `${product.name} بسعر ${product.price} جنيه. ${product.description}` },
         { property: "og:title", content: product.name },
         { property: "og:description", content: `${product.name} بسعر ${product.price} جنيه.` },
-        { property: "og:image", content: categoryImage(product.categoryId) },
-        { name: "twitter:image", content: categoryImage(product.categoryId) },
+        { property: "og:image", content: productImage(product) },
+        { name: "twitter:image", content: productImage(product) },
       ],
     };
   },
