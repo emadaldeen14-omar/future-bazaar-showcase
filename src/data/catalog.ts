@@ -95,7 +95,7 @@ export function reviewsFor(id: string) {
   return [reviewsList[seed % 5], reviewsList[(seed + 2) % 5], reviewsList[(seed + 4) % 5]];
 }
 
-const raw: Array<[string, string, number, string?]> = [
+const raw: Array<[string, string, number, string?, string?]> = [
   // fastfood
   ["fastfood", "ستريبس دولفين", 200, "عبوة"],
   ["fastfood", "ستريبس ولعتين", 280, "عبوة"],
