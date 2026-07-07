@@ -176,6 +176,11 @@ export function categoryImage(categoryId: string) {
   return categories.find((c) => c.id === categoryId)?.image ?? fastfood;
 }
 
+// Returns the product's own image if it has one, otherwise its category image.
+export function productImage(product: Product) {
+  return product.image ?? categoryImage(product.categoryId);
+}
+
 export function getProduct(id: string) {
   return products.find((p) => p.id === id);
 }
