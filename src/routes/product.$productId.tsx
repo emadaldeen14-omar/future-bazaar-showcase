@@ -5,9 +5,9 @@ import { StarRating } from "@/components/StarRating";
 import { ProductCard } from "@/components/ProductCard";
 import {
   brand,
-  categoryImage,
   getCategory,
   getProduct,
+  productImage,
   products,
   reviewsFor,
 } from "@/data/catalog";
