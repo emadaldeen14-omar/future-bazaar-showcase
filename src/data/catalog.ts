@@ -5,12 +5,24 @@ import seafood from "@/assets/cat-seafood.jpg";
 import dairy from "@/assets/cat-dairy.jpg";
 import misc from "@/assets/cat-misc.jpg";
 
+// ============================================================
+// PER-PRODUCT IMAGES
+// To give a product its own picture:
+//   1. Drop the image file in: src/assets/products/
+//   2. Import it here, e.g.:
+//        import stripsDolphin from "@/assets/products/strips-dolphin.jpg";
+//   3. Add a 5th value to that product's row in the `raw` list below:
+//        ["fastfood", "ستريبس دولفين", 200, "عبوة", stripsDolphin],
+// Products without a 5th value fall back to their category image.
+// ============================================================
+
 export type Product = {
   id: string;
   name: string;
   price: number;
   weight?: string;
   categoryId: string;
+  image?: string;
   rating: number;
   reviews: number;
   description: string;
