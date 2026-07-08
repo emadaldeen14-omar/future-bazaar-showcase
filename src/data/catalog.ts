@@ -5,6 +5,36 @@ import seafood from "@/assets/cat-seafood.jpg";
 import dairy from "@/assets/cat-dairy.jpg";
 import misc from "@/assets/cat-misc.jpg";
 
+// Per-product images
+import imgStripsDolphin from "@/assets/ستريبس دولفين.webp";
+import imgStripsWal3ten from "@/assets/ستريبس ولعتين.webp";
+import imgStripsMeza from "@/assets/ستريبسميزه.webp";
+import imgChickenBreast from "@/assets/صدور-فراشه-نساير-سمارت-1-كيلو.webp";
+import imgWagbaShahd from "@/assets/وجبة شهد فرخه كامله 12 قطعه.webp";
+import imgWagbaChictita from "@/assets/وجبة شيكتيتا.webp";
+import imgBurgerJustFrozen from "@/assets/برجر جاست فروزن.webp";
+import imgBurgerMitko from "@/assets/برجر ميتكو الاسود الجامبو.webp";
+import imgKoftaJustFrozen from "@/assets/كفته جاست فروزن.webp";
+import imgKoftaDolphin from "@/assets/كفته دولفين.webp";
+import imgHotDogMitko from "@/assets/هوت دوج ميتكو.png";
+import imgLiverSogod from "@/assets/كبده عصافيرى متبله سجود.webp";
+import imgBoury from "@/assets/بوري.webp";
+import imgMackerel from "@/assets/ماكريل يابانى.webp";
+import imgButterBaqari from "@/assets/زبدة بقرى المصريين.webp";
+import imgButterGamousi from "@/assets/زبدة جاموسي المصريين.webp";
+import imgBaqariNz from "@/assets/بقرى بديل النيوزلندى.webp";
+import imgMozzarella from "@/assets/موزاريلا.webp";
+import imgMix from "@/assets/مكس.webp";
+import imgCheddarSauce from "@/assets/صوص شيدر.webp";
+import imgRomyCheese from "@/assets/جبنة رومي.webp";
+import imgTarekCheese from "@/assets/جبنه الطارق.jpg";
+import imgFetaCheese from "@/assets/جبن المصريين فيتا.webp";
+import imgMesh from "@/assets/مش المصريين.webp";
+import imgMombar from "@/assets/ممبار العابد 2.webp";
+import imgEshSoury from "@/assets/عيش سوري.webp";
+import imgSalami from "@/assets/سلامي.webp";
+import imgCreamaLabani from "@/assets/كريمه لباني.webp";
+
 // ============================================================
 // PER-PRODUCT IMAGES
 // To give a product its own picture:
