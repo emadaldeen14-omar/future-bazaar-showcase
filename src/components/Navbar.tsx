@@ -85,9 +85,11 @@ export function Navbar() {
           اطلب الآن
         </a>
 
+        <CartButton className="ms-auto shrink-0 lg:ms-1" />
+
         <button
           onClick={() => setOpen((o) => !o)}
-          className="ms-auto rounded-full p-2 text-foreground lg:hidden"
+          className="shrink-0 rounded-full p-2 text-foreground lg:hidden"
           aria-label="القائمة"
         >
           {open ? <X /> : <Menu />}
