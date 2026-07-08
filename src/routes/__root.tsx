@@ -13,6 +13,8 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import { CartProvider } from "../context/CartContext";
+import { CartDrawer } from "../components/CartDrawer";
 
 function NotFoundComponent() {
   return (
