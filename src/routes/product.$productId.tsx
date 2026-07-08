@@ -53,6 +53,7 @@ export const Route = createFileRoute("/product/$productId")({
 
 function ProductPage() {
   const { product } = Route.useLoaderData();
+  const { addItem } = useCart();
   const category = getCategory(product.categoryId);
   const reviews = reviewsFor(product.id);
   const related = products
