@@ -1,6 +1,8 @@
 import { Link } from "@tanstack/react-router";
+import { ShoppingCart } from "lucide-react";
 import { StarRating } from "./StarRating";
 import { productImage, type Product } from "@/data/catalog";
+import { useCart } from "@/context/CartContext";
 
 export function ProductCard({ product }: { product: Product }) {
   return (
