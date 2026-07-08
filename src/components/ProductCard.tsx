@@ -1,8 +1,11 @@
 import { Link } from "@tanstack/react-router";
+import { ShoppingCart } from "lucide-react";
 import { StarRating } from "./StarRating";
 import { productImage, type Product } from "@/data/catalog";
+import { useCart } from "@/context/CartContext";
 
 export function ProductCard({ product }: { product: Product }) {
+  const { addItem } = useCart();
   return (
     <Link
       to="/product/$productId"
@@ -36,6 +39,18 @@ export function ProductCard({ product }: { product: Product }) {
           <span className="text-xl font-extrabold text-accent">{product.price}</span>
           <span className="text-sm font-bold text-muted-foreground">جنيه</span>
         </div>
+        <button
+          type="button"
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            addItem(product);
+          }}
+          className="mt-2 flex items-center justify-center gap-2 rounded-full bg-accent px-4 py-2.5 text-sm font-bold text-accent-foreground shadow-soft transition hover:opacity-90"
+        >
+          <ShoppingCart className="h-4 w-4" />
+          أضف للسلة
+        </button>
       </div>
     </Link>
   );

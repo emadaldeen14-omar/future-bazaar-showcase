@@ -1,8 +1,9 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useState } from "react";
-import { Star, ArrowRight, Snowflake, Thermometer, Package, MessageCircle } from "lucide-react";
+import { Star, ArrowRight, Snowflake, Thermometer, Package, MessageCircle, ShoppingCart } from "lucide-react";
 import { StarRating } from "@/components/StarRating";
 import { ProductCard } from "@/components/ProductCard";
+import { useCart } from "@/context/CartContext";
 import {
   brand,
   getCategory,
@@ -52,6 +53,7 @@ export const Route = createFileRoute("/product/$productId")({
 
 function ProductPage() {
   const { product } = Route.useLoaderData();
+  const { addItem } = useCart();
   const category = getCategory(product.categoryId);
   const reviews = reviewsFor(product.id);
   const related = products
@@ -129,15 +131,25 @@ function ProductPage() {
             ))}
           </div>
 
-          <a
-            href={brand.whatsapp}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-4 text-base font-bold text-accent-foreground shadow-soft transition hover:opacity-90"
-          >
-            <MessageCircle className="h-5 w-5" />
-            اطلب هذا المنتج عبر واتساب
-          </a>
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <button
+              type="button"
+              onClick={() => addItem(product)}
+              className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-accent px-6 py-4 text-base font-bold text-accent-foreground shadow-soft transition hover:opacity-90"
+            >
+              <ShoppingCart className="h-5 w-5" />
+              أضف للسلة
+            </button>
+            <a
+              href={brand.whatsapp}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-accent px-6 py-4 text-base font-bold text-accent transition hover:bg-accent/10"
+            >
+              <MessageCircle className="h-5 w-5" />
+              اطلب عبر واتساب
+            </a>
+          </div>
         </div>
       </div>
 
