@@ -1,63 +1,47 @@
-# Wire uploaded product images into the catalog
+# Shopping cart with WhatsApp order checkout
 
-All product photos now live directly in `src/assets/` (not `src/assets/products/`). I'll import each one in `src/data/catalog.ts` and attach it to the matching product row so cards and product pages show real photos instead of the shared category fallback.
+Add a client-side cart so users can collect products, adjust quantities, enter their **address** and **phone number**, then send the whole order as a pre-filled WhatsApp message to **01223890915** (international format `201223890915` → `https://wa.me/201223890915?text=...`). No backend — cart lives in React context and persists to `localStorage`.
 
-## What I'll do
+## New files
 
-Edit **only** `src/data/catalog.ts`:
+**`src/context/CartContext.tsx`** — cart provider + `useCart()` hook.
+- State: `items: { id, name, price, weight, image, qty }[]`, persisted to `localStorage` (key `bmc-cart`).
+- Actions: `addItem(product)`, `removeItem(id)`, `setQty(id, qty)`, `clear()`, plus `isOpen`/`setOpen`.
+- Derived: `count` (total qty), `total` (sum price×qty).
 
-1. Add an `import` for each image at the top of the file (Latin variable names, quoted Arabic paths), e.g.:
-   ```ts
-   import stripsDolphin from "@/assets/ستريبس دولفين.webp";
-   import burgerJustFrozen from "@/assets/برجر جاست فروزن.webp";
-   // ...etc
-   ```
-2. Add each as the 5th value in the matching product's row in the `raw` array.
+**`src/components/CartDrawer.tsx`** — slide-in panel (RTL, opens from the start side).
+- Lists items with thumbnail, name, price, quantity +/- controls, remove button.
+- Shows running total in جنيه.
+- **Two input fields**: العنوان (address) and رقم الهاتف (phone number), both required before ordering.
+- Empty state message when no items.
+- **"إتمام الطلب عبر واتساب"** button: validates fields, builds the Arabic order message, then opens `https://wa.me/201223890915?text=<encoded>` in a new tab. Uses `encodeURIComponent` for the message.
+- Optional "تفريغ السلة" (clear) link.
 
-No other files change — `productImage()`, `ProductCard`, and the product page already use the per-product image with category fallback.
+## Edited files
 
-## Image → product mapping
+**`src/routes/__root.tsx`** — wrap the app in `<CartProvider>` and render `<CartDrawer />` alongside Navbar/Footer.
 
-**Fast food & chicken**
-- ستريبس دولفين → `ستريبس دولفين.webp`
-- ستريبس ولعتين → `ستريبس ولعتين.webp`
-- ستريبس ميزه / الحريف / أطياب → `ستريبسميزه.webp`
-- صدور فراشه سمارت → `صدور-فراشه-نساير-سمارت-1-كيلو.webp`
-- وجبة شهد فرخه كامله → `وجبة شهد فرخه كامله 12 قطعه.webp`
-- وجبة شيكتيتا → `وجبة شيكتيتا.webp`
+**`src/components/Navbar.tsx`** — add a cart icon button (lucide `ShoppingCart`) with a badge showing `count`; clicking opens the drawer. Added to both desktop and mobile bars.
 
-**Burgers, kofta & meats**
-- برجر جاست فروزن → `برجر جاست فروزن.webp`
-- برجر ميتكو الاسود الجامبو → `برجر ميتكو الاسود الجامبو.webp`
-- كفته جاست فروزن → `كفته جاست فروزن.webp`
-- كفته دولفين مشويه + عجينة كفته دولفين → `كفته دولفين.webp`
-- هوت دوج ميتكو → `هوت دوج ميتكو.png`
-- كبده عصافيرى متبله سجود → `كبده عصافيرى متبله سجود.webp`
+**`src/components/ProductCard.tsx`** — add an "أضف للسلة" button. Since the card is a `<Link>`, the button uses `preventDefault`/`stopPropagation` so adding to cart doesn't navigate.
 
-**Seafood**
-- بورى مجمد → `بوري.webp`
-- ماكريل يابانى → `ماكريل يابانى.webp`
+**`src/routes/product.$productId.tsx`** — add an "أضف للسلة" button next to the existing WhatsApp button.
 
-**Dairy & cheese**
-- زبدة بقرى المصريين → `زبدة بقرى المصريين.webp`
-- زبدة جاموسى → `زبدة جاموسي المصريين.webp`
-- بقرى بديل النيوزلندى → `بقرى بديل النيوزلندى.webp`
-- موزاريلا → `موزاريلا.webp`
-- مكس → `مكس.webp`
-- صوص شيدر طبيعي → `صوص شيدر.webp`
-- جبن كريمى شيدر أو رومى → `جبنة رومي.webp`
-- جبن الطارق دمياطى → `جبنه الطارق.jpg`
-- جبن المصريين فيتا → `جبن المصريين فيتا.webp`
-- مش اللهلبو دمياطى → `مش المصريين.webp`
+## WhatsApp message format
 
-**Misc**
-- ممبار العابد (متضف + محشى) → `ممبار العابد 2.webp`
-- عيش سورى / جلاش / رقاق → `عيش سوري.webp`
-- روزبيف / سلامة / تركى مدخن → `سلامي.webp`
-- كريمه لبانى → `كريمه لباني.webp`
+No greeting line. First line is the address + phone, then products, then total:
 
-## Notes / unmatched
-- Some rows have no dedicated photo yet (e.g. برجر/كفته الاسكندرانى, sardines, shrimp, brazilian cuts, جوز سمان) — these keep the category-image fallback automatically.
-- Extra unused images (`جبنه شيدر.webp`, `ستريبس الحريف.jpg`, `ستريبس اطياب.png`, `جلاش سوري.webp`, `لفة رقاق طري.png`, `تركي مدخن.webp`) can be swapped in on request.
+```text
+• العنوان: قطاع T | الهاتف: 01000000000
+• ستريبس دولفين × 2 = 400 جنيه
+• موزاريلا × 1 = 100 جنيه
 
-After wiring, I'll confirm the build passes.
+الإجمالي: 500 جنيه
+```
+
+## Validation
+- Address and phone required (trimmed, non-empty) with inline error messages before the order can be sent.
+- Phone limited to a reasonable length; message encoded with `encodeURIComponent`.
+
+## Notes
+- The existing "اطلب الآن" WhatsApp community button stays as-is; the new order flow targets the order number 201223890915.
