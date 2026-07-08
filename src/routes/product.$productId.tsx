@@ -1,8 +1,9 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useState } from "react";
-import { Star, ArrowRight, Snowflake, Thermometer, Package, MessageCircle } from "lucide-react";
+import { Star, ArrowRight, Snowflake, Thermometer, Package, MessageCircle, ShoppingCart } from "lucide-react";
 import { StarRating } from "@/components/StarRating";
 import { ProductCard } from "@/components/ProductCard";
+import { useCart } from "@/context/CartContext";
 import {
   brand,
   getCategory,
