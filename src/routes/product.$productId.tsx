@@ -131,15 +131,25 @@ function ProductPage() {
             ))}
           </div>
 
-          <a
-            href={brand.whatsapp}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-4 text-base font-bold text-accent-foreground shadow-soft transition hover:opacity-90"
-          >
-            <MessageCircle className="h-5 w-5" />
-            اطلب هذا المنتج عبر واتساب
-          </a>
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <button
+              type="button"
+              onClick={() => addItem(product)}
+              className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-accent px-6 py-4 text-base font-bold text-accent-foreground shadow-soft transition hover:opacity-90"
+            >
+              <ShoppingCart className="h-5 w-5" />
+              أضف للسلة
+            </button>
+            <a
+              href={brand.whatsapp}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-accent px-6 py-4 text-base font-bold text-accent transition hover:bg-accent/10"
+            >
+              <MessageCircle className="h-5 w-5" />
+              اطلب عبر واتساب
+            </a>
+          </div>
         </div>
       </div>
 
