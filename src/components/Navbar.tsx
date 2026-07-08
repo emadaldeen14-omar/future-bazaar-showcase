@@ -1,8 +1,27 @@
 import { useState } from "react";
 import { Link, useNavigate } from "@tanstack/react-router";
-import { Search, Menu, X, Phone } from "lucide-react";
+import { Search, Menu, X, Phone, ShoppingCart } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { brand } from "@/data/catalog";
+import { useCart } from "@/context/CartContext";
+
+function CartButton({ className = "" }: { className?: string }) {
+  const { count, setOpen } = useCart();
+  return (
+    <button
+      onClick={() => setOpen(true)}
+      aria-label="سلة الطلبات"
+      className={`relative rounded-full p-2 text-foreground transition hover:bg-secondary ${className}`}
+    >
+      <ShoppingCart className="h-5 w-5" />
+      {count > 0 && (
+        <span className="absolute -end-0.5 -top-0.5 flex h-5 min-w-5 items-center justify-center rounded-full bg-accent px-1 text-[11px] font-bold text-accent-foreground">
+          {count}
+        </span>
+      )}
+    </button>
+  );
+}
 
 const navLinks = [
   { to: "/", label: "الرئيسية" },
