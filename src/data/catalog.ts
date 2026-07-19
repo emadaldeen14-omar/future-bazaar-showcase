@@ -4,6 +4,14 @@ import brazilian from "@/assets/cat-brazilian.jpg";
 import seafood from "@/assets/cat-seafood.jpg";
 import dairy from "@/assets/cat-dairy.jpg";
 import misc from "@/assets/cat-misc.jpg";
+import grocery from "@/assets/cat-grocery.jpg";
+import saltedFish from "@/assets/cat-salted-fish.jpg";
+
+import imgEggsRed from "@/assets/prod-eggs-red.jpg";
+import imgEggsWhite from "@/assets/prod-eggs-white.jpg";
+import imgEggsBaladi from "@/assets/prod-eggs-baladi.jpg";
+import imgFeseekh from "@/assets/prod-feseekh.jpg";
+import imgRengaa from "@/assets/prod-rengaa.jpg";
 
 // Per-product images
 import imgStripsDolphin from "@/assets/ستريبس دولفين.webp";
@@ -110,6 +118,20 @@ export const categories: Category[] = [
     image: misc,
     description: "ممبار، مدخنات، مخبوزات، ومنتجات متنوعة أخرى.",
   },
+  {
+    id: "grocery",
+    name: "البقاله",
+    short: "البقاله",
+    image: grocery,
+    description: "بيض طازج بأنواعه: أحمر، أبيض، وبلدي.",
+  },
+  {
+    id: "salted-fish",
+    name: "الاسماك المملحه",
+    short: "أسماك مملحة",
+    image: saltedFish,
+    description: "فسيخ ورنجة بأجود الأنواع وبطعم أصيل.",
+  },
 ];
 
 const reviewsList = [
@@ -182,6 +204,13 @@ const raw: Array<[string, string, number, string?, string?]> = [
   ["misc", "عيش سورى 7 رغيف / جلاش الحريف / لفة رقاق طرى", 25, "عبوة", imgEshSoury],
   ["misc", "روزبيف / سلامة / تركى مدخن ربع / نقانق", 80, "ربع / نص كيلو", imgSalami],
   ["misc", "كريمه لبانى", 55, "نص كيلو", imgCreamaLabani],
+  // grocery
+  ["grocery", "بيض احمر", 100, "كرتونة", imgEggsRed],
+  ["grocery", "بيض ابيض", 100, "كرتونة", imgEggsWhite],
+  ["grocery", "بيض بلدي", 100, "كرتونة", imgEggsBaladi],
+  // salted-fish
+  ["salted-fish", "فسيخ", 100, "عبوة", imgFeseekh],
+  ["salted-fish", "رنجه", 100, "عبوة", imgRengaa],
 ];
 
 function slugify(name: string, i: number) {
