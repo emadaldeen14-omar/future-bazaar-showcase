@@ -169,7 +169,7 @@ const raw: Array<[string, string, number, string?, string?]> = [
   ["dairy", "موزاريلا", 120, "نص كيلو", imgMozzarella],
 
   ["dairy", "موزاريلا كيلو", 220, "نص كيلو", imgMozzarella],
-  ["dairy", "مكس" 115,"نص كيلو", imgMix],
+  ["dairy", "مكس", 115, "نص كيلو", imgMix],
   ["dairy", "صوص شيدر طبيعي", 105, "نص كيلو", imgCheddarSauce],
   ["dairy", "جبن المصريين كريمى شيدر أو رومى طبيعي 100%", 90, "500 جرام", imgRomyCheese],
   ["dairy", "جبن الطارق دمياطى طبيعى العلبة صافى", 175, "كيلو", imgTarekCheese],
