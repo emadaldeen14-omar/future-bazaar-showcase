@@ -4,6 +4,14 @@ import brazilian from "@/assets/cat-brazilian.jpg";
 import seafood from "@/assets/cat-seafood.jpg";
 import dairy from "@/assets/cat-dairy.jpg";
 import misc from "@/assets/cat-misc.jpg";
+import grocery from "@/assets/cat-grocery.jpg";
+import saltedFish from "@/assets/cat-salted-fish.jpg";
+
+import imgEggsRed from "@/assets/prod-eggs-red.jpg";
+import imgEggsWhite from "@/assets/prod-eggs-white.jpg";
+import imgEggsBaladi from "@/assets/prod-eggs-baladi.jpg";
+import imgFeseekh from "@/assets/prod-feseekh.jpg";
+import imgRengaa from "@/assets/prod-rengaa.jpg";
 
 // Per-product images
 import imgStripsDolphin from "@/assets/ستريبس دولفين.webp";
