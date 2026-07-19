@@ -118,6 +118,20 @@ export const categories: Category[] = [
     image: misc,
     description: "ممبار، مدخنات، مخبوزات، ومنتجات متنوعة أخرى.",
   },
+  {
+    id: "grocery",
+    name: "البقاله",
+    short: "البقاله",
+    image: grocery,
+    description: "بيض طازج بأنواعه: أحمر، أبيض، وبلدي.",
+  },
+  {
+    id: "salted-fish",
+    name: "الاسماك المملحه",
+    short: "أسماك مملحة",
+    image: saltedFish,
+    description: "فسيخ ورنجة بأجود الأنواع وبطعم أصيل.",
+  },
 ];
 
 const reviewsList = [
