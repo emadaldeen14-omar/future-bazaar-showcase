@@ -1,0 +1,55 @@
+backend:
+  name: github
+  repo: your-username/your-repo
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "site"
+    label: "Site Data"
+    files:
+      - name: "catalog"
+        label: "Catalog"
+        file: "public/data.json"
+        format: "json"
+        fields:
+          - name: "brand"
+            label: "Brand"
+            widget: "object"
+            fields:
+              - { name: "name", label: "Name", widget: "string" }
+              - { name: "slogan", label: "Slogan", widget: "string" }
+              - { name: "badges", label: "Badges", widget: "list", field: { name: "badge", label: "Badge", widget: "string" } }
+              - { name: "hours", label: "Hours", widget: "string" }
+              - { name: "address", label: "Address", widget: "string" }
+              - { name: "phones", label: "Phones", widget: "list", field: { name: "phone", label: "Phone", widget: "string" } }
+              - { name: "whatsapp", label: "WhatsApp URL", widget: "string" }
+
+          - name: "reviews"
+            label: "Reviews"
+            widget: "list"
+            fields:
+              - { name: "name", label: "Name", widget: "string" }
+              - { name: "text", label: "Text", widget: "text" }
+
+          - name: "categories"
+            label: "Categories"
+            widget: "list"
+            fields:
+              - { name: "id", label: "ID (slug)", widget: "string" }
+              - { name: "name", label: "Name", widget: "string" }
+              - { name: "short", label: "Short Name", widget: "string" }
+              - { name: "image", label: "Image", widget: "image" }
+              - { name: "description", label: "Description", widget: "text" }
+
+          - name: "products"
+            label: "Products"
+            widget: "list"
+            fields:
+              - { name: "categoryId", label: "Category ID", widget: "string" }
+              - { name: "name", label: "Name", widget: "string" }
+              - { name: "price", label: "Price (EGP)", widget: "number", value_type: "int" }
+              - { name: "weight", label: "Weight / Unit", widget: "string", required: false }
+              - { name: "image", label: "Image", widget: "image", required: false }
