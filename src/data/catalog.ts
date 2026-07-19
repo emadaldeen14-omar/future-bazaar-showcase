@@ -209,8 +209,8 @@ const raw: Array<[string, string, number, string?, string?]> = [
   ["grocery", "بيض ابيض", 100, "كرتونة", imgEggsWhite],
   ["grocery", "بيض بلدي", 100, "كرتونة", imgEggsBaladi],
   // salted-fish
-  ["salted-fish", "فسيخ", 100, "عبوة", imgFeseekh],
-  ["salted-fish", "رنجه", 100, "عبوة", imgRengaa],
+  ["salted-fish", "فسيخ", 100, "كيلو", imgFeseekh],
+  ["salted-fish", "رنجه", 100, "كيلو", imgRengaa],
 ];
 
 function slugify(name: string, i: number) {
