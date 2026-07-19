@@ -1,7 +1,8 @@
 backend:
-  name: https://github.com/emadaldeen14-omar/future-bazaar-showcase
-  repo: your-username/your-repo
+  name: github
+  repo: emadaldeen14-omar/future-bazaar-showcase
   branch: main
+  base_url : ithub-oauth-login.now.sh
 
 media_folder: "public/images"
 public_folder: "/images"
