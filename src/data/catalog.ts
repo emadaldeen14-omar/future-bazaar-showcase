@@ -204,6 +204,13 @@ const raw: Array<[string, string, number, string?, string?]> = [
   ["misc", "عيش سورى 7 رغيف / جلاش الحريف / لفة رقاق طرى", 25, "عبوة", imgEshSoury],
   ["misc", "روزبيف / سلامة / تركى مدخن ربع / نقانق", 80, "ربع / نص كيلو", imgSalami],
   ["misc", "كريمه لبانى", 55, "نص كيلو", imgCreamaLabani],
+  // grocery
+  ["grocery", "بيض احمر", 100, "كرتونة", imgEggsRed],
+  ["grocery", "بيض ابيض", 100, "كرتونة", imgEggsWhite],
+  ["grocery", "بيض بلدي", 100, "كرتونة", imgEggsBaladi],
+  // salted-fish
+  ["salted-fish", "فسيخ", 100, "عبوة", imgFeseekh],
+  ["salted-fish", "رنجه", 100, "عبوة", imgRengaa],
 ];
 
 function slugify(name: string, i: number) {
