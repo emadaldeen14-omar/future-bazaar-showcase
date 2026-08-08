@@ -94,6 +94,13 @@
     { "categoryId": "grocery", "name": "صلصة بيتزا دره", "price": 40, "weight": "عبوة", "image": "/images/prod-sauces.jpg" },
     { "categoryId": "salted-fish", "name": "فسيخ", "price": 100, "weight": "كيلو", "image": "/images/prod-feseekh.jpg" },
     { "categoryId": "salted-fish", "name": "رنجه", "price": 100, "weight": "كيلو", "image": "/images/prod-rengaa.jpg" },
-    { "categoryId": "offers", "name": "عرض الخير", "price": 210, "oldPrice": 230, "weight": "عرض", "image": "/images/cat-offers.jpg", "description": "يتكون من (2 زيت + 3 مكرونة + 2 سكر)" }
+    { "categoryId": "offers", "name": "عرض الخير", "price": 210, "oldPrice": 230, "weight": "عرض", "image": "/images/cat-offers.jpg", "description": "يتكون من (2 زيت + 3 مكرونة + 2 سكر)" },
+    { "categoryId": "offers", "name": "ستريبس الحريف", "price": 195, "oldPrice": 215, "weight": "عبوة", "image": "/images/ستريبس الحريف.jpg" },
+    { "categoryId": "offers", "name": "ستريبس ولعتين", "price": 265, "oldPrice": 280, "weight": "عبوة", "image": "/images/ستريبس ولعتين.webp" },
+    { "categoryId": "offers", "name": "عجينه كفته دولفين ك", "price": 140, "oldPrice": 160, "weight": "كيلو", "image": "/images/كفته دولفين.webp" },
+    { "categoryId": "offers", "name": "كبده متبله جاهزه سو جود 450 جم", "price": 85, "oldPrice": 100, "weight": "450 جم", "image": "/images/كبده عصافيرى متبله سجود.webp" },
+    { "categoryId": "offers", "name": "كفته جاست فروزن", "price": 215, "oldPrice": 230, "weight": "800 جرام", "image": "/images/كفته جاست فروزن.webp" },
+    { "categoryId": "offers", "name": "برجر جاست فروزن", "price": 215, "oldPrice": 230, "weight": "800 جرام", "image": "/images/برجر جاست فروزن.webp" },
+    { "categoryId": "offers", "name": "كباب مشكل جاست فروزن", "price": 260, "oldPrice": 280, "weight": "عبوة", "image": "/images/cat-offers.jpg" }
   ]
 }
