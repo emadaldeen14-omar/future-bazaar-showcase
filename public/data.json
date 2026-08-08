@@ -22,7 +22,7 @@
     { "id": "seafood", "name": "الأسماك والمأكولات البحرية", "short": "أسماك وسي فود", "image": "/images/cat-seafood.jpg", "description": "بوري، سردين، ماكريل، وجمبري من أطيب البحار." },
     { "id": "dairy", "name": "الزبدة والأجبان والموزاريلا", "short": "زبدة وأجبان", "image": "/images/cat-dairy.jpg", "description": "زبدة طبيعية، أجبان، وموزاريلا 100% طبيعية." },
     { "id": "misc", "name": "المتنوع", "short": "منتجات متنوعة", "image": "/images/cat-misc.jpg", "description": "ممبار، مدخنات، مخبوزات، ومنتجات متنوعة أخرى." },
-    { "id": "grocery", "name": "البقاله", "short": "البقاله", "image": "/images/cat-grocery.jpg", "description": "بيض طازج بأنواعه: أحمر، أبيض، وبلدي." },
+    { "id": "grocery", "name": "البقاله والصوصات", "short": "البقاله والصوصات", "image": "/images/cat-grocery.jpg", "description": "بيض طازج بأنواعه وتشكيلة صوصات ومايونيز بأفضل الماركات." },
     { "id": "salted-fish", "name": "الاسماك المملحه", "short": "أسماك مملحة", "image": "/images/cat-salted-fish.jpg", "description": "فسيخ ورنجة بأجود الأنواع وبطعم أصيل." }
   ],
   "products": [
@@ -78,6 +78,19 @@
     { "categoryId": "grocery", "name": "بيض احمر", "price": 100, "weight": "كرتونة", "image": "/images/prod-eggs-red.jpg" },
     { "categoryId": "grocery", "name": "بيض ابيض", "price": 100, "weight": "كرتونة", "image": "/images/prod-eggs-white.jpg" },
     { "categoryId": "grocery", "name": "بيض بلدي", "price": 100, "weight": "كرتونة", "image": "/images/prod-eggs-baladi.jpg" },
+    { "categoryId": "grocery", "name": "مايو نيز ايليو", "price": 50, "weight": "400 جم", "image": "/images/prod-sauces.jpg" },
+    { "categoryId": "grocery", "name": "باربيكيو ايليو", "price": 45, "weight": "400 جم", "image": "/images/prod-sauces.jpg" },
+    { "categoryId": "grocery", "name": "ثوميه ايليو", "price": 60, "weight": "400 جم", "image": "/images/prod-sauces.jpg" },
+    { "categoryId": "grocery", "name": "تكساس ايليو", "price": 80, "weight": "400 جم", "image": "/images/prod-sauces.jpg" },
+    { "categoryId": "grocery", "name": "كاتشب ايليو", "price": 45, "weight": "400 جم", "image": "/images/prod-sauces.jpg" },
+    { "categoryId": "grocery", "name": "مسترده ايليو", "price": 45, "weight": "400 جم", "image": "/images/prod-sauces.jpg" },
+    { "categoryId": "grocery", "name": "كوريان صوص ايليو", "price": 65, "weight": "400 جم", "image": "/images/prod-sauces.jpg" },
+    { "categoryId": "grocery", "name": "صوص الف جزيره ايليو", "price": 60, "weight": "400 جم", "image": "/images/prod-sauces.jpg" },
+    { "categoryId": "grocery", "name": "صوص رانش ايليو", "price": 60, "weight": "400 جم", "image": "/images/prod-sauces.jpg" },
+    { "categoryId": "grocery", "name": "سويت شيلي ايليو", "price": 45, "weight": "400 جم", "image": "/images/prod-sauces.jpg" },
+    { "categoryId": "grocery", "name": "صوص شيدر غازي لاند", "price": 80, "weight": "400 جم", "image": "/images/prod-sauces.jpg" },
+    { "categoryId": "grocery", "name": "كاتشب لافيستا", "price": 65, "weight": "1000 جم", "image": "/images/prod-sauces.jpg" },
+    { "categoryId": "grocery", "name": "صلصة بيتزا دره", "price": 40, "weight": "عبوة", "image": "/images/prod-sauces.jpg" },
     { "categoryId": "salted-fish", "name": "فسيخ", "price": 100, "weight": "كيلو", "image": "/images/prod-feseekh.jpg" },
     { "categoryId": "salted-fish", "name": "رنجه", "price": 100, "weight": "كيلو", "image": "/images/prod-rengaa.jpg" }
   ]
