@@ -23,7 +23,8 @@
     { "id": "dairy", "name": "الزبدة والأجبان والموزاريلا", "short": "زبدة وأجبان", "image": "/images/cat-dairy.jpg", "description": "زبدة طبيعية، أجبان، وموزاريلا 100% طبيعية." },
     { "id": "misc", "name": "المتنوع", "short": "منتجات متنوعة", "image": "/images/cat-misc.jpg", "description": "ممبار، مدخنات، مخبوزات، ومنتجات متنوعة أخرى." },
     { "id": "grocery", "name": "البقاله والصوصات", "short": "البقاله والصوصات", "image": "/images/cat-grocery.jpg", "description": "بيض طازج بأنواعه وتشكيلة صوصات ومايونيز بأفضل الماركات." },
-    { "id": "salted-fish", "name": "الاسماك المملحه", "short": "أسماك مملحة", "image": "/images/cat-salted-fish.jpg", "description": "فسيخ ورنجة بأجود الأنواع وبطعم أصيل." }
+    { "id": "salted-fish", "name": "الاسماك المملحه", "short": "أسماك مملحة", "image": "/images/cat-salted-fish.jpg", "description": "فسيخ ورنجة بأجود الأنواع وبطعم أصيل." },
+    { "id": "offers", "name": "العروض والأسعار الخاصة", "short": "عروض وأسعار خاصة", "image": "/images/cat-offers.jpg", "description": "عروض حصرية بأسعار مخفضة على أفضل المنتجات الأساسية." }
   ],
   "products": [
     { "categoryId": "fastfood", "name": "ستريبس دولفين كيلو ", "price": 195, "weight": "عبوة", "image": "/images/ستريبس دولفين.webp" },
@@ -92,6 +93,7 @@
     { "categoryId": "grocery", "name": "كاتشب لافيستا", "price": 65, "weight": "1000 جم", "image": "/images/prod-sauces.jpg" },
     { "categoryId": "grocery", "name": "صلصة بيتزا دره", "price": 40, "weight": "عبوة", "image": "/images/prod-sauces.jpg" },
     { "categoryId": "salted-fish", "name": "فسيخ", "price": 100, "weight": "كيلو", "image": "/images/prod-feseekh.jpg" },
-    { "categoryId": "salted-fish", "name": "رنجه", "price": 100, "weight": "كيلو", "image": "/images/prod-rengaa.jpg" }
+    { "categoryId": "salted-fish", "name": "رنجه", "price": 100, "weight": "كيلو", "image": "/images/prod-rengaa.jpg" },
+    { "categoryId": "offers", "name": "عرض الخير", "price": 210, "oldPrice": 230, "weight": "عرض", "image": "/images/cat-offers.jpg", "description": "يتكون من (2 زيت + 3 مكرونة + 2 سكر)" }
   ]
 }

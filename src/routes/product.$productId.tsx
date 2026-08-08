@@ -110,9 +110,19 @@ function ProductPage() {
             </span>
           </div>
 
-          <div className="mt-5 flex items-baseline gap-2">
+          <div className="mt-5 flex flex-wrap items-baseline gap-3">
             <span className="text-4xl font-extrabold text-accent">{product.price}</span>
             <span className="text-lg font-bold text-muted-foreground">جنيه مصري</span>
+            {product.oldPrice && product.oldPrice > product.price && (
+              <>
+                <span className="text-xl font-bold text-muted-foreground line-through">
+                  {product.oldPrice} جنيه
+                </span>
+                <span className="rounded-full bg-destructive px-3 py-1 text-sm font-extrabold text-destructive-foreground">
+                  وفر {product.oldPrice - product.price} جنيه
+                </span>
+              </>
+            )}
           </div>
 
           <p className="mt-5 leading-relaxed text-foreground/80">{product.description}</p>

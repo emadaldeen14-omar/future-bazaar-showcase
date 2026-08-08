@@ -4,6 +4,7 @@ export type Product = {
   id: string;
   name: string;
   price: number;
+  oldPrice?: number;
   weight?: string;
   categoryId: string;
   image?: string;
@@ -38,20 +39,24 @@ type RawProduct = {
   categoryId: string;
   name: string;
   price: number;
+  oldPrice?: number;
   weight?: string;
   image?: string;
+  description?: string;
 };
 
 export const products: Product[] = (data.products as RawProduct[]).map((p, i) => ({
   id: slugify(p.name, i),
   name: p.name,
   price: p.price,
+  oldPrice: p.oldPrice,
   weight: p.weight,
   categoryId: p.categoryId,
   image: p.image,
   rating: 4 + ((i * 7) % 10) / 10,
   reviews: 8 + ((i * 13) % 90),
   description:
+    p.description ??
     "منتج طازج مجمد بأفضل جودة، مُعد بعناية للحفاظ على النكهة والقيمة الغذائية. أسعارنا تنافسية وجودتنا مضمونة.",
   featured: i % 7 === 0,
 }));

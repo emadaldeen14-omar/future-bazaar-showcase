@@ -21,6 +21,11 @@ export function ProductCard({ product }: { product: Product }) {
           height={800}
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
+        {product.oldPrice && product.oldPrice > product.price && (
+          <span className="absolute start-3 top-3 rounded-full bg-destructive px-3 py-1 text-xs font-extrabold text-destructive-foreground shadow-soft">
+            خصم {Math.round(((product.oldPrice - product.price) / product.oldPrice) * 100)}%
+          </span>
+        )}
         {product.weight && (
           <span className="absolute end-3 top-3 rounded-full bg-primary/90 px-3 py-1 text-xs font-bold text-primary-foreground backdrop-blur">
             {product.weight}
@@ -35,9 +40,19 @@ export function ProductCard({ product }: { product: Product }) {
           <StarRating value={product.rating} size={14} />
           <span className="text-xs text-muted-foreground">({product.reviews})</span>
         </div>
-        <div className="mt-auto flex items-baseline gap-1 pt-2">
+        <div className="mt-auto flex flex-wrap items-baseline gap-2 pt-2">
           <span className="text-xl font-extrabold text-accent">{product.price}</span>
           <span className="text-sm font-bold text-muted-foreground">جنيه</span>
+          {product.oldPrice && product.oldPrice > product.price && (
+            <>
+              <span className="text-sm font-bold text-muted-foreground line-through">
+                {product.oldPrice} جنيه
+              </span>
+              <span className="rounded-full bg-destructive/10 px-2 py-0.5 text-xs font-bold text-destructive">
+                وفر {product.oldPrice - product.price} جنيه
+              </span>
+            </>
+          )}
         </div>
         <button
           type="button"
