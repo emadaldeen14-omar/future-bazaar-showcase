@@ -36,7 +36,7 @@
     { "categoryId": "burgers", "name": "برجر جاست فروزن ", "price": 230, "weight": "800 جرام", "image": "/images/برجر جاست فروزن.webp" },
     { "categoryId": "burgers", "name": "برجر لحوم الاسكندرانى", "price": 115, "weight": "نص كيلو" },
     { "categoryId": "burgers", "name": "برجر ميتكو الاسود الجامبو", "price": 220, "weight": "10 قطع", "image": "/images/برجر ميتكو الاسود الجامبو.webp" },
-    { "categoryId": "burgers", "name": "برجر شيكتيتا", "price": 190, "weight": "20ق كيلو" },
+    { "categoryId": "burgers", "name": "برجر شيكتيتا", "price": 190, "weight": "20ق كيلو", "image": "/images/وجبة شيكتيتا.webp" },
     { "categoryId": "burgers", "name": "كفته لحوم الاسكندرانى", "price": 115, "weight": "نص كيلو" },
     { "categoryId": "burgers", "name": "كفته جاست فروزن", "price": 230, "weight": "800 جرام", "image": "/images/كفته جاست فروزن.webp" },
     { "categoryId": "burgers", "name": "كفته دولفين مشويه على الفحم جاهزه على التسخين", "price": 230, "weight": "كيلو", "image": "/images/كفته دولفين.webp" },
